@@ -20,6 +20,7 @@ h1 {
     overflow: hidden;
     border-right: .15em solid #6c8159;
     margin: 0 auto;
+    text-align: center;
     /* Gives that scrolling effect as the typing happens */
     letter-spacing: .15em;
     /* Adjust as needed */
@@ -39,3 +40,9 @@ h1 {
     }
 }
 
+@media (max-width: 500px) {
+    h1 {
+        font-size: .8rem;
+        width: 60%;
+    }
+}

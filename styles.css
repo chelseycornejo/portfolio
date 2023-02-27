@@ -26,16 +26,14 @@ h1 {
     animation:
         typing 3.5s steps(40, end),
         blink-caret .75s step-end infinite;
-        padding-top: 20px;
+        margin-top: 20px;
 }
 
 @keyframes blink-caret {
-
     from,
     to {
         border-color: transparent
     }
-
     50% {
         border-color: #6c8159;
     }

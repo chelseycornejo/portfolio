@@ -1,0 +1,129 @@
+@use "_variables.scss" as *;
+@use "_mixins.scss" as *;
+
+// GLOBAL STYLES
+// body {
+//     font-family: $baseFont;
+// }
+* {
+    margin: 0px;
+}
+
+body {
+    background-color: $backGroundOne;
+}
+
+.wrapper {
+    max-width: 1250px;
+    width: 85%;
+    margin: 0 auto;
+}
+
+figure {
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+a {
+    margin: 0;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+// SECTION COUNT LIGHT BG
+.sectionCountLight {
+    flex-basis: 10%;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: center;
+
+    .vertical {
+        height: 10vh;
+        width: .2vw;
+        border-width: 0px;
+        background-color: #000;
+        margin: 10px auto;
+    }
+
+    h5 {
+        // transform: rotate(-90deg);
+        writing-mode: vertical-lr;
+        text-orientation: mixed;
+        margin: 0 auto;
+        text-transform: uppercase;
+    }
+}
+
+.horizontalLight {
+    width: 6vw;
+    height: .2vh;
+    background-color: $primary;
+    border: $primary solid 1px;
+    margin: 15px 0px;
+}
+
+// SECTION COUNT DARK BG
+.sectionCountDark {
+    h4 {
+        color: $fourth;
+    }
+
+    flex-basis: 10%;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: center;
+
+    .vertical {
+        height: 10vh;
+        width: .2vw;
+        border-width: 0px;
+        background-color: $secondary;
+        margin: 10px auto;
+    }
+
+    h5 {
+        // transform: rotate(-90deg);
+        writing-mode: vertical-lr;
+        text-orientation: mixed;
+        margin: 0 auto;
+        text-transform: uppercase;
+        color: $backGroundOne;
+    }
+}
+
+.horizontalDark {
+    width: 6vw;
+    height: .2vh;
+    background-color: $secondary;
+    border: $secondary solid 1px;
+    margin: 15px 0px;
+}
+
+// Scroll Nav
+.scrollNav {
+    position: fixed;
+    right: 0;
+    left: 90vw;
+    bottom: 0;
+    top: 45vh;
+
+}

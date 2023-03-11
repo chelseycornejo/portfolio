@@ -1,0 +1,52 @@
+@use './variables' as *;
+
+header {
+    height: 100vh;
+}
+
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+
+    .mainNav,
+    h3 {
+        flex-basis: 15%;
+    }
+
+    .mainNav {
+        flex-basis: 50%;
+
+        .topNav {
+            padding-left: 0px;
+            flex-basis: 40%;
+            display: flex;
+
+            li {
+                flex-basis: 25%;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.headerFlex {
+    display: flex;
+    align-content: center;
+    justify-content: flex-start;
+    height: 90vh;
+    flex-basis: 70%;
+}
+
+.header {
+    flex-basis: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30px;
+
+    h1,
+    h2 {
+        text-transform: uppercase;
+    }
+}

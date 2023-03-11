@@ -1,0 +1,55 @@
+@use './variables.scss' as *;
+@use './_mixins.scss' as *;
+
+body {
+    font-family: $baseFont;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: $primary;
+    text-transform: uppercase;
+    font-family: $headerFont;
+}
+
+p {
+    line-height: 35px;
+}
+
+h1 {
+    @include headerSemiBold(2.7rem);
+    text-transform: uppercase;
+}
+
+h2 {
+    @include headerSemiBold(1.6rem);
+    text-transform: uppercase;
+}
+
+h4 {
+    font-size: 3.5rem;
+    font-family: $accentFont;
+    color: $third;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+
+h5 {
+    // transform: rotate(-90deg);
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    margin: 0 auto;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: $backGroundTwo;
+    font-family: $headerFont;
+
+}
+
+.logo {
+    font-family: $accentFont;
+}

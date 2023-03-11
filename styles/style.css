@@ -205,7 +205,6 @@ template {
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-size: 125%;
 }
 
 *, *:before, *:after {
@@ -509,7 +508,83 @@ section.about {
   margin: auto 0;
   padding-right: 50px;
   color: #DBDBDB;
+  text-align: justify;
 }
 .aboutFlex h2 {
   color: #fff;
+}
+
+section.skills .skillsFlex {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+section.skills .skillsFlex .stack {
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
+  margin: auto 0;
+  margin-right: 175px;
+}
+
+.stackFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 0;
+  padding-right: 0px;
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.stackFlex li {
+  -ms-flex-preferred-size: calc(25% - 20px);
+      flex-basis: calc(25% - 20px);
+  margin: 10px;
+  text-transform: uppercase;
+  text-align: center;
+  padding-right: 25px;
+  color: #7A7A79;
+}
+.stackFlex li i {
+  font-size: 5rem;
+  display: block;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+section.projects {
+  background-color: #595958;
+}
+section.projects .projectFlex {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.contactFlex {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }

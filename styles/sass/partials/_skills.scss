@@ -1,0 +1,41 @@
+@use './variables' as *;
+
+section.skills {
+    .skillsFlex {
+        min-height: 100vh;
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+
+        .stack {
+            flex-basis: 60%;
+            margin: auto 0;
+            margin-right: 175px;
+
+        }
+    }
+}
+
+.stackFlex {
+    display: flex;
+    padding-left: 0;
+    padding-right: 0px;
+    flex-basis:60%;
+    flex-wrap: wrap;
+    justify-content: center;
+    li {
+        flex-basis: calc(25% - 20px);
+        margin: 10px;
+        text-transform: uppercase;
+        text-align: center;
+        padding-right: 25px;
+        color: $fourth;
+        i {
+            font-size: 5rem;
+            display: block;
+            color: $primary;
+            margin-bottom: 10px;
+        }
+    }
+
+}

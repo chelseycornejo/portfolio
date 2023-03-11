@@ -1,0 +1,23 @@
+@use './variables' as *;
+
+section.about {
+    background-color: $backGroundTwo;
+}
+
+.aboutFlex {
+    display: flex;
+    min-height: 100vh;
+    justify-content: space-between;
+    align-content: center;
+
+    article {
+        flex-basis: 50%;
+        margin: auto 0;
+        padding-right: 50px;
+        color: $third;
+    }
+
+    h2 {
+        color: $secondary;
+    }
+}

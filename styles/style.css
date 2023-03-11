@@ -430,3 +430,29 @@ header {
 .header h2 {
   text-transform: uppercase;
 }
+
+section.about {
+  background-color: #595958;
+}
+
+.aboutFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+.aboutFlex article {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  margin: auto 0;
+  padding-right: 50px;
+  color: #DBDBDB;
+}
+.aboutFlex h2 {
+  color: #fff;
+}

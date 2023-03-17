@@ -358,6 +358,7 @@ a {
   left: 90vw;
   bottom: 0;
   top: 45vh;
+  line-height: 32px;
 }
 
 body {
@@ -375,14 +376,23 @@ a {
   font-family: "Montserrat", sans-serif;
 }
 
+a:hover,
+a:focus {
+  color: #DBDBDB;
+}
+
+a:active {
+  color: #fff;
+}
+
 p {
   line-height: 35px;
 }
 
 h1 {
-  font-size: 2.7rem;
+  font-size: 4rem;
   font-family: "Montserrat", sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
@@ -394,7 +404,7 @@ h2 {
 }
 
 h4 {
-  font-size: 3.5rem;
+  font-size: 3.7rem;
   font-family: "Times New Roman", Times, serif;
   color: #DBDBDB;
   margin: 0 auto;
@@ -415,6 +425,7 @@ h5 {
 
 .logo {
   font-family: "Times New Roman", Times, serif;
+  font-size: 2rem;
 }
 
 header {
@@ -502,6 +513,10 @@ section.about {
   -ms-flex-line-pack: center;
       align-content: center;
 }
+.aboutFlex figure {
+  width: 300px;
+  margin: auto 0;
+}
 .aboutFlex article {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
@@ -575,16 +590,74 @@ section.projects .projectFlex {
           justify-content: space-between;
   -ms-flex-line-pack: center;
       align-content: center;
+  position: relative;
+  overflow: hidden;
 }
-
-.contactFlex {
-  min-height: 100vh;
+section.projects .projectFlex .listOfProjects {
+  -ms-flex-preferred-size: 90%;
+      flex-basis: 90%;
+  margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
+}
+section.projects .projectFlex .listOfProjects .project {
+  position: relative;
+  -ms-flex-preferred-size: 45%;
+      flex-basis: 45%;
+  margin: 10px;
+}
+section.projects .projectFlex .listOfProjects .project figure img {
+  border-radius: 25px;
+}
+section.projects .projectFlex .listOfProjects .project .overlay {
+  position: absolute;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.829);
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  border-radius: 25px;
+  width: 100%;
+}
+section.projects .projectFlex .listOfProjects .project .overlay h2,
+section.projects .projectFlex .listOfProjects .project .overlay a,
+section.projects .projectFlex .listOfProjects .project .overlay p {
+  color: #fff;
+  text-align: center;
+  margin: 0 10px;
+}
+section.projects .projectFlex .listOfProjects .overlay:hover {
+  opacity: 1;
+}
+
+footer p {
+  text-align: center;
+  background-color: #595958;
+  color: #DBDBDB;
+}
+footer p a {
+  color: #DBDBDB;
+  text-transform: capitalize;
 }

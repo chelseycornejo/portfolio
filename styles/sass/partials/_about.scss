@@ -9,7 +9,10 @@ section.about {
     min-height: 100vh;
     justify-content: space-between;
     align-content: center;
-
+    figure {
+        width: 300px;
+        margin: auto 0;
+    }
     article {
         flex-basis: 50%;
         margin: auto 0;

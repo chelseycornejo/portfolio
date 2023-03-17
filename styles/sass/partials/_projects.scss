@@ -8,5 +8,50 @@ section.projects {
         display: flex;
         justify-content: space-between;
         align-content: center;
+        position: relative;
+        overflow: hidden;
+        .listOfProjects {
+            flex-basis: 90%;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+            .project {
+                position: relative;
+                flex-basis: 45%;
+                margin: 10px;
+                figure {
+                    img {
+                        border-radius: 25px;
+                    }
+                }
+                .overlay {
+                    position: absolute;
+                    top: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0.829);
+                    opacity: 0;
+                    transition: opacity 0.3s;
+                    border-radius: 25px;
+                    width: 100%;
+                    h2,
+                    a,
+                    p {
+                        color: $secondary;
+                        text-align: center;
+                        margin: 0 10px;
+                    }
+                    }
+                }
+                .overlay:hover {
+                    opacity: 1;
+                }
+            }
+        }
     }
-}
+

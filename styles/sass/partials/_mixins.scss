@@ -1,6 +1,13 @@
 @use "_variables.scss" as *;
 
 // Semi-Bold header - Font Weight: 600
+@mixin headerBold ($sizeValue) {
+    font-size: $sizeValue;
+    font-family: $headerFont;
+    font-weight: 700;
+}
+
+// Semi-Bold header - Font Weight: 600
 @mixin headerSemiBold ($sizeValue) {
     font-size: $sizeValue;
     font-family: $headerFont;

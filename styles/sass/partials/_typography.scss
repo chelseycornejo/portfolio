@@ -16,12 +16,21 @@ a {
     font-family: $headerFont;
 }
 
+a:hover,
+a:focus {
+    color: $third;
+}
+
+a:active {
+    color: $secondary;
+}
+
 p {
     line-height: 35px;
 }
 
 h1 {
-    @include headerSemiBold(2.7rem);
+    @include headerBold(4rem);
     text-transform: uppercase;
 }
 
@@ -31,7 +40,7 @@ h2 {
 }
 
 h4 {
-    font-size: 3.5rem;
+    font-size: 3.7rem;
     font-family: $accentFont;
     color: $third;
     margin: 0 auto;
@@ -52,4 +61,5 @@ h5 {
 
 .logo {
     font-family: $accentFont;
+    font-size: 2rem;
 }

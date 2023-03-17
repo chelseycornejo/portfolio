@@ -1,0 +1,11 @@
+@use './variables' as *;
+
+footer p {
+    text-align: center;
+    background-color: $backGroundTwo;
+    color: $third;
+    a {
+        color: $third;
+        text-transform: capitalize;
+    }
+}

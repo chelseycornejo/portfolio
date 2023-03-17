@@ -652,6 +652,62 @@ section.projects .projectFlex .listOfProjects .overlay:hover {
   opacity: 1;
 }
 
+.contactFlex {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+.contactFlex .contactInfo {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+  margin: auto 0;
+}
+.contactFlex .contactInfo ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 0px;
+}
+.contactFlex .contactInfo ul li {
+  -ms-flex-preferred-size: 10%;
+      flex-basis: 10%;
+  font-size: 1.5rem;
+  margin: 10px;
+}
+
+.contactForm {
+  -ms-flex-preferred-size: 45%;
+      flex-basis: 45%;
+  margin: auto 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.contactForm .name,
+.contactForm .email,
+.contactForm .message {
+  border: #595958 solid 2px;
+  margin: 10px 0;
+  padding-left: 10px;
+  line-height: 32px;
+}
+.contactForm .message {
+  resize: none;
+}
+.contactForm button {
+  line-height: 32px;
+}
+
 footer p {
   text-align: center;
   background-color: #595958;

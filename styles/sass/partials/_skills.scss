@@ -8,10 +8,11 @@ section.skills {
         align-content: center;
 
         .stack {
-            flex-basis: 60%;
-            margin: auto 0;
-            margin-right: 175px;
-
+            flex-basis: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-right: 100px;
         }
     }
 }
@@ -27,15 +28,68 @@ section.skills {
         flex-basis: calc(25% - 20px);
         margin: 10px;
         text-transform: uppercase;
-        text-align: center;
-        padding-right: 25px;
         color: $fourth;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
         i {
             font-size: 5rem;
             display: block;
             color: $primary;
             margin-bottom: 10px;
+            text-align: center;
         }
     }
 
+}
+
+@media (max-width: 975px) {
+    section.skills .skillsFlex .stack {
+        flex-basis: 100%;
+        margin-right: 0px;
+        padding-left: 30px;
+
+    }
+}
+
+@media (max-width: 749px) {
+    .stackFlex {
+
+        li {
+            flex-basis: 25%;
+            min-width: 100px;
+            i {
+
+                font-size: 4rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 529px) {
+    .stackFlex li {
+        min-width: 80px;
+    }
+}
+
+@media (max-width: 496px) {
+    .skillsFlex .stack {
+        padding-left: 0px;
+        flex-basis: 100%;
+    }
+
+    section.skills .skillsFlex .stack {
+        padding-left: 0px;
+        
+    }
+}
+
+@media (max-width: 352px) {
+    .stackFlex li {
+        min-width: 60px;
+        i {
+        font-size: 2rem;
+        }
+    }
 }

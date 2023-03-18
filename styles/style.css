@@ -695,10 +695,19 @@ section.skills .skillsFlex {
       align-content: center;
 }
 section.skills .skillsFlex .stack {
-  -ms-flex-preferred-size: 60%;
-      flex-basis: 60%;
-  margin: auto 0;
-  margin-right: 175px;
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 100px;
 }
 
 .stackFlex {
@@ -720,17 +729,70 @@ section.skills .skillsFlex .stack {
       flex-basis: calc(25% - 20px);
   margin: 10px;
   text-transform: uppercase;
-  text-align: center;
-  padding-right: 25px;
   color: #404040;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .stackFlex li i {
   font-size: 5rem;
   display: block;
   color: #000;
   margin-bottom: 10px;
+  text-align: center;
 }
 
+@media (max-width: 975px) {
+  section.skills .skillsFlex .stack {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin-right: 0px;
+    padding-left: 30px;
+  }
+}
+@media (max-width: 749px) {
+  .stackFlex li {
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+    min-width: 100px;
+  }
+  .stackFlex li i {
+    font-size: 4rem;
+  }
+}
+@media (max-width: 529px) {
+  .stackFlex li {
+    min-width: 80px;
+  }
+}
+@media (max-width: 496px) {
+  .skillsFlex .stack {
+    padding-left: 0px;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  section.skills .skillsFlex .stack {
+    padding-left: 0px;
+  }
+}
+@media (max-width: 352px) {
+  .stackFlex li {
+    min-width: 60px;
+  }
+  .stackFlex li i {
+    font-size: 2rem;
+  }
+}
 section.projects {
   background-color: #2f2f2f;
 }
@@ -788,12 +850,12 @@ section.projects .projectFlex .listOfProjects .project .overlay {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 100%;
+  width: 100%;
   background-color: rgba(0, 0, 0, 0.829);
   opacity: 0;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
   border-radius: 25px;
-  width: 100%;
 }
 section.projects .projectFlex .listOfProjects .project .overlay h2,
 section.projects .projectFlex .listOfProjects .project .overlay a,

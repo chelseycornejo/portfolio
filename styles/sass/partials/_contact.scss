@@ -6,29 +6,35 @@
     justify-content: space-between;
     align-content: center;
 
-    .contactInfo {
-        flex-basis: 30%;
+    .contactContainer {
+        flex-basis: 90%;
         margin: auto 0;
-
-        ul {
+        display: flex;
+        justify-content: space-around;
+        align-content: center;
+        .contactInfo{
+            flex-basis: 30%;
+            padding-left: 30px;
             display: flex;
-            padding-left: 0px;
-
-            li {
-                flex-basis: 10%;
-                font-size: 1.5rem;
-                margin: 10px;
+            flex-direction: column;
+            justify-content: center;
+            ul {
+                display: flex;
+                li {
+                    margin: 10px;
+                    font-size: 2rem;
+                }
             }
+        }
+        .contactForm {
+            flex-basis: 50%;
+                display: flex;
+                flex-direction: column;
         }
     }
 }
 
 .contactForm {
-    flex-basis: 45%;
-    margin: auto 50px;
-    display: flex;
-    flex-direction: column;
-
     .name,
     .email,
     .message {
@@ -51,5 +57,48 @@
         color: $backGroundOne;
         border: none;
         border-radius: 20px;
+    }
+}
+@media (max-width: 896px) {
+    .contactFlex .contactContainer {
+        flex-direction: column;
+        margin: 100px;
+        .contactForm {
+            padding-left: 30px;
+        }
+        .contactInfo ul{
+            justify-content: center;
+            padding-left: 0;
+        }
+        p {
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: 845px) {
+    .contactFlex .contactContainer {
+        margin: 75px;
+    }
+}
+
+@media (max-width: 700px) {
+    .contactFlex .contactContainer {
+        margin: 75px 40px;
+    }
+}
+@media (max-width: 496px) {
+    .contactFlex .contactContainer {
+        flex-basis: 100%;
+        margin: 50px 0;
+        .contactForm,
+        .contactInfo {
+            padding-left: 0px;
+        }
+    }
+
+    .sectionCountLight,
+    .sectionCountDark {
+        display: none;
     }
 }

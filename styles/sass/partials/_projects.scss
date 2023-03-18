@@ -17,7 +17,7 @@ section.projects {
             flex-wrap: wrap;
             justify-content: center;
             align-content: center;
-            .project {
+            .project{
                 position: relative;
                 flex-basis: 45%;
                 margin: 10px;
@@ -48,10 +48,12 @@ section.projects {
                     }
                     }
                 }
-                .overlay:hover {
+                .overlay:hover,
+                .overlay:focus-within {
                     opacity: 1;
                 }
             }
         }
     }
+
 

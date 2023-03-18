@@ -2,28 +2,69 @@
 
 header {
     height: 100vh;
+    position: relative;
 }
 
 .navBar {
     display: flex;
     justify-content: space-between;
-    padding-top: 20px;
     .mainNav,
     h3 {
         flex-basis: 15%;
     }
-
+    h3 {
+        font-size: 2.5rem;
+    }
+    // h3:hover {
+    //     transform: scale(1.5);
+    // }
+    button:hover,
+    button:focus,
+    button:focus-within {
+        color: $accent;
+    }
+    button {
+        display: none;
+        background: none;
+        font-size: 2rem;
+        border: none;
+        position: absolute;
+        right: 0;
+    }
+    .fa-xmark {
+        color: $secondary;
+    }
     .mainNav {
+        display: none;
+        position: absolute;
+        position:fixed;
+        right: 0;
+        background: rgba(0, 0, 0, 0.919);
         flex-basis: 50%;
-
+        width: 100vw;
+        z-index: 10;
+        animation: fadeIn .5s;
         .topNav {
             padding-left: 0px;
             flex-basis: 40%;
+            height: 100vh;
             display: flex;
+            flex-direction: column;
+            justify-content: center;
 
             li {
-                flex-basis: 25%;
                 text-align: center;
+                a {
+                    display: block;
+                    padding: 25px 0;
+                    color: $secondary;
+
+                }
+                a:hover,
+                a:focus {
+                    color: $accent;
+                    
+                }
             }
         }
     }
@@ -56,3 +97,76 @@ header {
 //     background-size: cover;
 //     // margin: 100px 0;
 // }
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+// Scroll Nav
+.scrollNav {
+    position: fixed;
+    right: 0;
+    left: 90vw;
+    bottom: 0;
+    top: 45vh;
+    line-height: 32px;
+    font-size: 1.3rem;
+    
+    a.active {
+        // planted color choice
+        transform: scale(1.2);
+        color: $accent;
+        transition: .3s ease background;
+        padding: 5px;
+    }
+    a:hover,
+    a:focus {
+        color: $accent;
+        background: none;
+    }
+    // a:link {
+    //     color: black;
+    // }
+}
+
+
+@media (max-width: 896px) {
+
+    .header {
+        text-align: center;
+    }
+    .navBar button {
+        display: inline;
+        position: fixed;
+    }
+    .scrollNav .smoothScroll{
+        display: none;
+    }
+}
+
+@media (max-width: 496px) {
+    .header {
+        padding-left: 0px;
+        flex-basis: 100%;
+    }
+    .sectionCountLight,
+    .sectionCountDark {
+        display: none;
+    }
+}
+
+@media (max-width: 391px) {
+    .header {
+        h1 {
+            font-size: 3.3rem;
+        }
+        h2 {
+            font-size: 1.2rem;
+        }
+    }
+}

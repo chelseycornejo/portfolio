@@ -32,10 +32,12 @@
     .name,
     .email,
     .message {
-        border: $backGroundTwo solid 2px;
+        border: none;
+        border-bottom: $backGroundTwo solid 2px;
         margin: 10px 0;
         padding-left: 10px;
         line-height: 32px;
+        background: $backGroundOne;
     }
 
     .message {
@@ -43,6 +45,11 @@
     }
 
     button {
-        line-height: 32px;
+        line-height: 40px;
+        cursor: pointer;
+        background: $backGroundTwo;
+        color: $backGroundOne;
+        border: none;
+        border-radius: 20px;
     }
 }

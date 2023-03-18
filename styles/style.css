@@ -268,6 +268,10 @@ a {
   text-decoration: none;
 }
 
+button {
+  cursor: pointer;
+}
+
 .sectionCountLight {
   -ms-flex-preferred-size: 10%;
       flex-basis: 10%;
@@ -292,9 +296,8 @@ a {
   margin: 10px auto;
 }
 .sectionCountLight h5 {
-  -webkit-writing-mode: vertical-lr;
-      -ms-writing-mode: tb-lr;
-          writing-mode: vertical-lr;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
   text-orientation: mixed;
   margin: 0 auto;
   text-transform: uppercase;
@@ -325,7 +328,7 @@ a {
           justify-content: center;
 }
 .sectionCountDark h4 {
-  color: #7A7A79;
+  color: #404040;
 }
 .sectionCountDark .vertical {
   height: 10vh;
@@ -335,9 +338,8 @@ a {
   margin: 10px auto;
 }
 .sectionCountDark h5 {
-  -webkit-writing-mode: vertical-lr;
-      -ms-writing-mode: tb-lr;
-          writing-mode: vertical-lr;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
   text-orientation: mixed;
   margin: 0 auto;
   text-transform: uppercase;
@@ -352,15 +354,12 @@ a {
   margin: 15px 0px;
 }
 
-.scrollNav {
-  position: fixed;
-  right: 0;
-  left: 90vw;
-  bottom: 0;
-  top: 45vh;
-  line-height: 32px;
+@media (max-width: 896px) {
+  .horizontalDark,
+  .horizontalLight {
+    width: 100%;
+  }
 }
-
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -379,6 +378,7 @@ a {
 a:hover,
 a:focus {
   color: #DBDBDB;
+  background: #000;
 }
 
 a:active {
@@ -419,7 +419,7 @@ h5 {
   margin: 0 auto;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  color: #595958;
+  color: #2f2f2f;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -430,6 +430,7 @@ h5 {
 
 header {
   height: 100vh;
+  position: relative;
 }
 
 .navBar {
@@ -439,29 +440,71 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-top: 20px;
 }
 .navBar .mainNav,
 .navBar h3 {
   -ms-flex-preferred-size: 15%;
       flex-basis: 15%;
 }
+.navBar h3 {
+  font-size: 2.5rem;
+}
+.navBar button:hover,
+.navBar button:focus,
+.navBar button:focus-within {
+  color: #7b8e68;
+}
+.navBar button {
+  display: none;
+  background: none;
+  font-size: 2rem;
+  border: none;
+  position: absolute;
+  right: 0;
+}
+.navBar .fa-xmark {
+  color: #fff;
+}
 .navBar .mainNav {
+  display: none;
+  position: absolute;
+  position: fixed;
+  right: 0;
+  background: rgba(0, 0, 0, 0.919);
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
+  width: 100vw;
+  z-index: 10;
+  -webkit-animation: fadeIn 0.5s;
+          animation: fadeIn 0.5s;
 }
 .navBar .mainNav .topNav {
   padding-left: 0px;
   -ms-flex-preferred-size: 40%;
       flex-basis: 40%;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .navBar .mainNav .topNav li {
-  -ms-flex-preferred-size: 25%;
-      flex-basis: 25%;
   text-align: center;
+}
+.navBar .mainNav .topNav li a {
+  display: block;
+  padding: 25px 0;
+  color: #fff;
+}
+.navBar .mainNav .topNav li a:hover,
+.navBar .mainNav .topNav li a:focus {
+  color: #7b8e68;
 }
 
 .headerFlex {
@@ -498,8 +541,79 @@ header {
   text-transform: uppercase;
 }
 
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.scrollNav {
+  position: fixed;
+  right: 0;
+  left: 90vw;
+  bottom: 0;
+  top: 45vh;
+  line-height: 32px;
+  font-size: 1.3rem;
+}
+.scrollNav a.active {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  color: #7b8e68;
+  -webkit-transition: 0.3s ease background;
+  transition: 0.3s ease background;
+  padding: 5px;
+}
+.scrollNav a:hover,
+.scrollNav a:focus {
+  color: #7b8e68;
+  background: none;
+}
+
+@media (max-width: 896px) {
+  .header {
+    text-align: center;
+  }
+  .navBar button {
+    display: inline;
+    position: fixed;
+  }
+  .scrollNav .smoothScroll {
+    display: none;
+  }
+}
+@media (max-width: 496px) {
+  .header {
+    padding-left: 0px;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .sectionCountLight,
+  .sectionCountDark {
+    display: none;
+  }
+}
+@media (max-width: 391px) {
+  .header h1 {
+    font-size: 3.3rem;
+  }
+  .header h2 {
+    font-size: 1.2rem;
+  }
+}
 section.about {
-  background-color: #595958;
+  background-color: #2f2f2f;
 }
 
 .aboutFlex {
@@ -513,11 +627,22 @@ section.about {
   -ms-flex-line-pack: center;
       align-content: center;
 }
-.aboutFlex figure {
-  width: 300px;
+.aboutFlex .aboutContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.aboutFlex .aboutContent figure {
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
   margin: auto 0;
 }
-.aboutFlex article {
+.aboutFlex .aboutContent article {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
   margin: auto 0;
@@ -529,6 +654,35 @@ section.about {
   color: #fff;
 }
 
+@media (max-width: 896px) {
+  .aboutFlex .aboutContent {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-left: 30px;
+    margin: 50px 0;
+  }
+  .aboutFlex .aboutContent article {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    padding-right: 0px;
+  }
+  .aboutFlex .aboutContent figure {
+    width: 70%;
+  }
+}
+@media (max-width: 496px) {
+  .aboutFlex .aboutContent {
+    padding-left: 0px;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .sectionCountLight,
+  .sectionCountDark {
+    display: none;
+  }
+}
 section.skills .skillsFlex {
   min-height: 100vh;
   display: -webkit-box;
@@ -568,7 +722,7 @@ section.skills .skillsFlex .stack {
   text-transform: uppercase;
   text-align: center;
   padding-right: 25px;
-  color: #7A7A79;
+  color: #404040;
 }
 .stackFlex li i {
   font-size: 5rem;
@@ -578,7 +732,7 @@ section.skills .skillsFlex .stack {
 }
 
 section.projects {
-  background-color: #595958;
+  background-color: #2f2f2f;
 }
 section.projects .projectFlex {
   min-height: 100vh;
@@ -648,7 +802,8 @@ section.projects .projectFlex .listOfProjects .project .overlay p {
   text-align: center;
   margin: 0 10px;
 }
-section.projects .projectFlex .listOfProjects .overlay:hover {
+section.projects .projectFlex .listOfProjects .overlay:hover,
+section.projects .projectFlex .listOfProjects .overlay:focus-within {
   opacity: 1;
 }
 
@@ -696,21 +851,28 @@ section.projects .projectFlex .listOfProjects .overlay:hover {
 .contactForm .name,
 .contactForm .email,
 .contactForm .message {
-  border: #595958 solid 2px;
+  border: none;
+  border-bottom: #2f2f2f solid 2px;
   margin: 10px 0;
   padding-left: 10px;
   line-height: 32px;
+  background: #ECECEC;
 }
 .contactForm .message {
   resize: none;
 }
 .contactForm button {
-  line-height: 32px;
+  line-height: 40px;
+  cursor: pointer;
+  background: #2f2f2f;
+  color: #ECECEC;
+  border: none;
+  border-radius: 20px;
 }
 
 footer p {
   text-align: center;
-  background-color: #595958;
+  background-color: #2f2f2f;
   color: #DBDBDB;
 }
 footer p a {

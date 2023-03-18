@@ -47,6 +47,10 @@ a {
     text-decoration: none;
 }
 
+button {
+    cursor: pointer;
+}
+
 // SECTION COUNT LIGHT BG
 .sectionCountLight {
     flex-basis: 10%;
@@ -64,8 +68,7 @@ a {
     }
 
     h5 {
-        // transform: rotate(-90deg);
-        writing-mode: vertical-lr;
+        transform: rotate(180deg);
         text-orientation: mixed;
         margin: 0 auto;
         text-transform: uppercase;
@@ -101,8 +104,7 @@ a {
     }
 
     h5 {
-        // transform: rotate(-90deg);
-        writing-mode: vertical-lr;
+        transform: rotate(180deg);
         text-orientation: mixed;
         margin: 0 auto;
         text-transform: uppercase;
@@ -118,12 +120,22 @@ a {
     margin: 15px 0px;
 }
 
-// Scroll Nav
-.scrollNav {
-    position: fixed;
-    right: 0;
-    left: 90vw;
-    bottom: 0;
-    top: 45vh;
-    line-height: 32px;
+@media (max-width: 896px) {
+
+    .horizontalDark,
+    .horizontalLight {
+        width: 100%;
+    };
 }
+
+
+// #678061
+// main {
+//     scroll-snap-type: y mandatory;
+//     overflow-y: scroll;
+//     height: 100vh;
+// }
+
+// section {
+//     scroll-snap-align: start;
+// }

@@ -359,6 +359,12 @@ button {
   .horizontalLight {
     width: 100%;
   }
+  .sectionCountLight,
+  .sectionCountDark {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    margin-top: 50px;
+  }
 }
 body {
   font-family: "Roboto", sans-serif;
@@ -428,6 +434,16 @@ h5 {
   font-size: 2rem;
 }
 
+@media (max-width: 496px) {
+  p {
+    line-height: 25px;
+  }
+}
+@media (max-width: 412px) {
+  html {
+    font-size: 16px;
+  }
+}
 header {
   height: 100vh;
   position: relative;
@@ -461,6 +477,8 @@ header {
   border: none;
   position: absolute;
   right: 0;
+  padding-top: 10px;
+  padding-right: 10px;
 }
 .navBar .fa-xmark {
   color: #fff;
@@ -504,7 +522,8 @@ header {
 }
 .navBar .mainNav .topNav li a:hover,
 .navBar .mainNav .topNav li a:focus {
-  color: #7b8e68;
+  background-color: #7b8e68;
+  color: #fff;
 }
 
 .headerFlex {
@@ -810,8 +829,8 @@ section.projects .projectFlex {
   overflow: hidden;
 }
 section.projects .projectFlex .listOfProjects {
-  -ms-flex-preferred-size: 90%;
-      flex-basis: 90%;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
   margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -824,16 +843,17 @@ section.projects .projectFlex .listOfProjects {
   -ms-flex-line-pack: center;
       align-content: center;
 }
-section.projects .projectFlex .listOfProjects .project {
+
+.project {
   position: relative;
   -ms-flex-preferred-size: 45%;
       flex-basis: 45%;
   margin: 10px;
 }
-section.projects .projectFlex .listOfProjects .project figure img {
+.project figure img {
   border-radius: 25px;
 }
-section.projects .projectFlex .listOfProjects .project .overlay {
+.project .overlay {
   position: absolute;
   top: 0;
   display: -webkit-box;
@@ -857,18 +877,74 @@ section.projects .projectFlex .listOfProjects .project .overlay {
   transition: opacity 0.3s;
   border-radius: 25px;
 }
-section.projects .projectFlex .listOfProjects .project .overlay h2,
-section.projects .projectFlex .listOfProjects .project .overlay a,
-section.projects .projectFlex .listOfProjects .project .overlay p {
+.project .overlay h2,
+.project .overlay a,
+.project .overlay p {
   color: #fff;
   text-align: center;
   margin: 0 10px;
 }
-section.projects .projectFlex .listOfProjects .overlay:hover,
-section.projects .projectFlex .listOfProjects .overlay:focus-within {
+.project .overlay a:hover,
+.project .overlay a:focus {
+  background-color: #ECECEC;
+  color: #2f2f2f;
+}
+
+.overlay:hover,
+.overlay:focus-within {
   opacity: 1;
 }
 
+@media (max-width: 1187px) {
+  section.projects .projectFlex .listOfProjects {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-preferred-size: 70%;
+        flex-basis: 70%;
+    margin-top: 50px;
+  }
+}
+@media (max-width: 896px) {
+  section.projects .projectFlex .listOfProjects {
+    padding-left: 30px;
+  }
+}
+@media (max-width: 770px) {
+  section.projects .projectFlex .listOfProjects {
+    -ms-flex-preferred-size: 90%;
+        flex-basis: 90%;
+  }
+}
+@media (max-width: 605px) {
+  section.projects .projectFlex .listOfProjects {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .project .horizontalLight,
+  .project .horizontalDark {
+    margin: 0px;
+  }
+  .project p {
+    line-height: 25px;
+  }
+}
+@media (max-width: 496px) {
+  section.projects .projectFlex .listOfProjects {
+    padding-left: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  section.projects .projectFlex .listOfProjects .project {
+    -ms-flex-preferred-size: 20%;
+        flex-basis: 20%;
+  }
+}
 .contactFlex {
   min-height: 100vh;
   display: -webkit-box;

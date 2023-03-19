@@ -126,5 +126,11 @@ button {
     .horizontalLight {
         width: 100%;
     };
+
+    .sectionCountLight,
+    .sectionCountDark {
+        align-self: flex-start;
+        margin-top: 50px;
+    }
 }
 

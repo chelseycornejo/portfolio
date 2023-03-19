@@ -15,9 +15,7 @@ header {
     h3 {
         font-size: 2.5rem;
     }
-    // h3:hover {
-    //     transform: scale(1.5);
-    // }
+
     button:hover,
     button:focus,
     button:focus-within {
@@ -30,11 +28,14 @@ header {
         border: none;
         position: absolute;
         right: 0;
+        padding-top: 10px;
+        padding-right: 10px;
     }
     .fa-xmark {
         color: $secondary;
     }
-    .mainNav {
+    
+    .mainNav{
         display: none;
         position: absolute;
         position:fixed;
@@ -43,7 +44,7 @@ header {
         flex-basis: 50%;
         width: 100vw;
         z-index: 10;
-        animation: fadeIn .5s;
+        animation: fadeIn .5s; 
         .topNav {
             padding-left: 0px;
             flex-basis: 40%;
@@ -62,7 +63,8 @@ header {
                 }
                 a:hover,
                 a:focus {
-                    color: $accent;
+                    background-color: $accent;
+                    color: $secondary;
                     
                 }
             }

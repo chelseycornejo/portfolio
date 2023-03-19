@@ -11,49 +11,110 @@ section.projects {
         position: relative;
         overflow: hidden;
         .listOfProjects {
-            flex-basis: 90%;
+            flex-basis: 100%;
             margin: auto;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             align-content: center;
-            .project{
-                position: relative;
-                flex-basis: 45%;
-                margin: 10px;
-                figure {
-                    img {
-                        border-radius: 25px;
-                    }
-                }
-                .overlay {
-                    position: absolute;
-                    top: 0;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    flex-direction: column;
-                    height: 100%;
-                    width: 100%;
-                    background-color: rgba(0, 0, 0, 0.829);
-                    opacity: 0;
-                    transition: opacity 0.3s;
-                    border-radius: 25px;
-                    h2,
-                    a,
-                    p {
-                        color: $secondary;
-                        text-align: center;
-                        margin: 0 10px;
-                    }
-                    }
-                }
-                .overlay:hover,
-                .overlay:focus-within {
-                    opacity: 1;
-                }
             }
         }
     }
 
+.project {
+    position: relative;
+    flex-basis: 45%;
+    margin: 10px;
 
+    figure {
+        img {
+            border-radius: 25px;
+        }
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.829);
+        opacity: 0;
+        transition: opacity 0.3s;
+        border-radius: 25px;
+
+        h2,
+        a,
+        p {
+            color: $secondary;
+            text-align: center;
+            margin: 0 10px;
+        }
+
+        a:hover,
+        a:focus {
+            background-color: $backGroundOne;
+            color: $backGroundTwo;
+        }
+
+    }
+}
+
+.overlay:hover,
+.overlay:focus-within {
+    opacity: 1;
+}
+// 1187 when overlay bleeds out of container
+@media (max-width: 1187px) {
+    section.projects .projectFlex .listOfProjects {
+        flex-direction: column;
+        flex-basis: 70%;
+        margin-top: 50px;
+
+    }
+}
+
+@media (max-width: 896px) {
+    section.projects .projectFlex .listOfProjects {
+        padding-left: 30px;
+    }
+}
+
+@media (max-width: 770px) {
+    section.projects .projectFlex .listOfProjects {
+        flex-basis: 90%;
+    }
+}
+
+@media (max-width: 605px) {
+    section.projects .projectFlex .listOfProjects {
+            flex-basis: 100%;
+        }
+    .project {
+        .horizontalLight,
+        .horizontalDark {
+            margin: 0px;
+        }
+        p {
+        line-height: 25px;
+        }
+    }
+}
+
+@media (max-width: 496px) {
+    section.projects .projectFlex .listOfProjects {
+        padding-left: 0;
+        flex-direction: column;
+        flex-basis: 100%;
+        .project {
+            flex-basis: 20%;
+        }
+    }
+}
+
+@media (max-width: 402px) {
+
+}

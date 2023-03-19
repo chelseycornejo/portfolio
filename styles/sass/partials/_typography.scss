@@ -64,3 +64,15 @@ h5 {
     font-family: $accentFont;
     font-size: 2rem;
 }
+
+@media (max-width: 496px) {
+    p {
+        line-height: 25px;
+    }
+}
+
+@media (max-width: 412px) {
+    html {
+        font-size: 16px;
+    }
+}

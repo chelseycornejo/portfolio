@@ -48,13 +48,13 @@ window.addEventListener('scroll', () => {
 
 // BURGER MENU
 // query select the burger menu and exit menu
-const burgerMenu = document.querySelector('.fa-bars');
-const exit = document.querySelector('.fa-xmark');
+const burgerMenu = document.querySelector('.openMenu');
+const exit = document.querySelector('.exitMenu');
 
 // add click event listener to burger menu so it changes hides the burger menu icon and shows the .mainNav
 burgerMenu.addEventListener('click', (e) => {
     const menu = document.querySelector('.mainNav');
-    menu.style.display = 'inline';
+    menu.style.display = 'block';
     burgerMenu.style.display = 'none';
 
     const burgerNav = document.querySelectorAll('.burgerNav')
@@ -63,7 +63,7 @@ burgerMenu.addEventListener('click', (e) => {
         anchor.addEventListener('click', (e) => {
 
             menu.style.display = 'none';
-            burgerMenu.style.display = 'inline';
+            burgerMenu.style.display = 'block';
         })
     })
 })
@@ -72,7 +72,7 @@ burgerMenu.addEventListener('click', (e) => {
 exit.addEventListener('click', () => {
     const menu = document.querySelector('.mainNav');
     menu.style.display = 'none';
-    burgerMenu.style.display = 'inline';
+    burgerMenu.style.display = 'block';
 })
 
 

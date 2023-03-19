@@ -463,7 +463,7 @@ header {
       flex-basis: 15%;
 }
 .navBar h3 {
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 .navBar button:hover,
 .navBar button:focus,
@@ -769,6 +769,9 @@ section.skills .skillsFlex .stack {
   color: #000;
   margin-bottom: 10px;
   text-align: center;
+}
+.stackFlex li img {
+  width: 5rem;
 }
 
 @media (max-width: 975px) {

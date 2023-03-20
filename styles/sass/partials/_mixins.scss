@@ -14,13 +14,6 @@
     font-weight: 600;
 }
 
-// Medium header - Font Weight: 500
-@mixin headerMedium ($sizeValue) {
-    font-size: $sizeValue;
-    font-family: $headerFont;
-    font-weight: 500;
-}
-
 // Regular header - Font Weight: 300
 @mixin headerRegular ($sizeValue) {
     font-size: $sizeValue;

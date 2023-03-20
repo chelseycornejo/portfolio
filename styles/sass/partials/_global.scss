@@ -2,9 +2,7 @@
 @use "_mixins.scss" as *;
 
 // GLOBAL STYLES
-// body {
-//     font-family: $baseFont;
-// }
+
 * {
     margin: 0px;
 }
@@ -22,18 +20,6 @@ body {
 figure {
     margin: 0;
 }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-ul,
-a {
-    margin: 0;
-}
-
 img {
     display: block;
     width: 100%;

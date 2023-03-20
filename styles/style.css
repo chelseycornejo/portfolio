@@ -244,17 +244,6 @@ figure {
   margin: 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-ul,
-a {
-  margin: 0;
-}
-
 img {
   display: block;
   width: 100%;
@@ -893,6 +882,8 @@ section.projects .projectFlex .listOfProjects {
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
   border-radius: 25px;
+  -ms-flex-preferred-size: 90%;
+      flex-basis: 90%;
 }
 .project .overlay h2,
 .project .overlay a,
@@ -918,9 +909,11 @@ section.projects .projectFlex .listOfProjects {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin: 30px;
+    margin: 30px 0;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
+    -ms-flex-preferred-size: 90%;
+        flex-basis: 90%;
   }
   section.projects .projectFlex .listOfProjects .project {
     -ms-flex-preferred-size: 100%;

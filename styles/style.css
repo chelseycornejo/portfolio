@@ -762,6 +762,9 @@ section.skills .skillsFlex .stack {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 .stackFlex li i {
   font-size: 5rem;
@@ -772,6 +775,11 @@ section.skills .skillsFlex .stack {
 }
 .stackFlex li img {
   width: 5rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.stackFlex li p {
+  text-align: center;
 }
 
 @media (max-width: 975px) {
@@ -790,6 +798,9 @@ section.skills .skillsFlex .stack {
   }
   .stackFlex li i {
     font-size: 4rem;
+  }
+  .stackFlex li img {
+    width: 4rem;
   }
 }
 @media (max-width: 529px) {
@@ -813,6 +824,9 @@ section.skills .skillsFlex .stack {
   }
   .stackFlex li i {
     font-size: 2rem;
+  }
+  .stackFlex li img {
+    width: 2.5rem;
   }
 }
 section.projects {

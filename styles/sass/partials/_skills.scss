@@ -33,6 +33,7 @@ section.skills {
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        flex-grow: 1;
         i {
             font-size: 5rem;
             display: block;
@@ -42,6 +43,11 @@ section.skills {
         }
         img {
             width: 5rem;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        p {
+            text-align: center;
         }
     }
 
@@ -63,8 +69,10 @@ section.skills {
             flex-basis: 25%;
             min-width: 100px;
             i {
-
                 font-size: 4rem;
+            }
+            img {
+                width: 4rem;
             }
         }
     }
@@ -93,6 +101,10 @@ section.skills {
         min-width: 60px;
         i {
         font-size: 2rem;
+        }
+        img {
+            width: 2.5rem;
+
         }
     }
 }

@@ -1,10 +1,15 @@
+
+// GLOBALS
 @use './partials/setup';
 @use './partials/global';
 @use './partials/typography';
+@use './partials/footer';
+
+
+// WEBSITE SECTIONS and MEDIA QUERIES
 @use './partials/header';
 @use './partials/about';
 @use './partials/skills';
 @use './partials/projects';
 @use './partials/contact';
-@use './partials/footer';
 

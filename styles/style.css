@@ -433,6 +433,16 @@ h5 {
     font-size: 16px;
   }
 }
+footer p {
+  text-align: center;
+  background-color: #2f2f2f;
+  color: #DBDBDB;
+}
+footer p a {
+  color: #DBDBDB;
+  text-transform: capitalize;
+}
+
 header {
   height: 100vh;
   position: relative;
@@ -1100,13 +1110,4 @@ section.projects .projectFlex .listOfProjects {
   .sectionCountDark {
     display: none;
   }
-}
-footer p {
-  text-align: center;
-  background-color: #2f2f2f;
-  color: #DBDBDB;
-}
-footer p a {
-  color: #DBDBDB;
-  text-transform: capitalize;
 }

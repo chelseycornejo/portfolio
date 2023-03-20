@@ -950,23 +950,7 @@ section.projects .projectFlex .listOfProjects {
     line-height: 25px;
   }
 }
-@media (max-width: 496px) {
-  section.projects .projectFlex .listOfProjects {
-    padding-left: 0;
-    margin: 50px 0;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-  }
-  section.projects .projectFlex .listOfProjects .project {
-    -ms-flex-preferred-size: 20%;
-        flex-basis: 20%;
-  }
-}
-@media (max-width: 400px) {
+@media (max-width: 572px) {
   .project {
     position: relative;
     -ms-flex-preferred-size: 45%;
@@ -982,6 +966,22 @@ section.projects .projectFlex .listOfProjects {
     background-color: rgba(0, 0, 0, 0.829);
     opacity: 1;
     border-radius: 0 0 25px 25px;
+  }
+}
+@media (max-width: 496px) {
+  section.projects .projectFlex .listOfProjects {
+    padding-left: 0;
+    margin: 50px 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  section.projects .projectFlex .listOfProjects .project {
+    -ms-flex-preferred-size: 20%;
+        flex-basis: 20%;
   }
 }
 .contactFlex {

@@ -71,9 +71,11 @@ section.projects {
 @media (max-width: 1187px) {
     section.projects .projectFlex .listOfProjects {
         flex-direction: column;
-        flex-basis: 70%;
-        margin-top: 50px;
-
+        margin: 30px;
+        flex-wrap: nowrap;
+        .project {
+            flex-basis: 100%;
+        }
     }
 }
 
@@ -85,14 +87,12 @@ section.projects {
 
 @media (max-width: 770px) {
     section.projects .projectFlex .listOfProjects {
-        flex-basis: 90%;
+        flex-basis: 100%;
     }
 }
 
-@media (max-width: 605px) {
-    section.projects .projectFlex .listOfProjects {
-            flex-basis: 100%;
-        }
+
+@media (max-width: 778px) {
     .project {
         .horizontalLight,
         .horizontalDark {
@@ -107,6 +107,7 @@ section.projects {
 @media (max-width: 496px) {
     section.projects .projectFlex .listOfProjects {
         padding-left: 0;
+        margin: 50px 0;
         flex-direction: column;
         flex-basis: 100%;
         .project {
@@ -115,6 +116,26 @@ section.projects {
     }
 }
 
-@media (max-width: 402px) {
-
+@media (max-width: 400px) {
+    .project {
+            position: relative;
+            flex-basis: 45%;
+            margin: 10px;
+    
+            figure {
+                img {
+                    border-radius: 25px 25px 0 0;
+                }
+            }
+    
+            .overlay {
+                position: static;
+                height: auto;
+                // width: 100%;
+                background-color: rgba(0, 0, 0, 0.829);
+                opacity: 1;
+                // transition: opacity 0.3s;
+                border-radius: 0 0 25px 25px;
+        }
+    }
 }

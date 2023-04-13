@@ -317,7 +317,7 @@ button {
           justify-content: center;
 }
 .sectionCountDark h4 {
-  color: #404040;
+  color: #ECECEC;
 }
 .sectionCountDark .vertical {
   height: 10vh;
@@ -365,15 +365,17 @@ ul {
 
 a {
   text-decoration: none;
-  color: #000;
+  color: #878787;
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
 }
 
-a:hover,
+a:hover {
+  color: #000;
+}
+
 a:focus {
-  color: #DBDBDB;
-  background: #000;
+  color: #878787;
 }
 
 a:active {
@@ -401,7 +403,7 @@ h2 {
 h4 {
   font-size: 3.7rem;
   font-family: "Times New Roman", Times, serif;
-  color: #DBDBDB;
+  color: #2f2f2f;
   margin: 0 auto;
   text-transform: uppercase;
 }
@@ -467,7 +469,7 @@ header {
 .navBar button:hover,
 .navBar button:focus,
 .navBar button:focus-within {
-  color: #7b8e68;
+  color: #566448;
 }
 .navBar button {
   display: none;
@@ -521,7 +523,7 @@ header {
 }
 .navBar .mainNav .topNav li a:hover,
 .navBar .mainNav .topNav li a:focus {
-  background-color: #7b8e68;
+  background-color: #566448;
   color: #fff;
 }
 
@@ -588,14 +590,13 @@ header {
 .scrollNav a.active {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
-  color: #7b8e68;
+  color: #566448;
   -webkit-transition: 0.3s ease background;
   transition: 0.3s ease background;
   padding: 5px;
 }
-.scrollNav a:hover,
-.scrollNav a:focus {
-  color: #7b8e68;
+.scrollNav a:hover {
+  color: #566448;
   background: none;
 }
 

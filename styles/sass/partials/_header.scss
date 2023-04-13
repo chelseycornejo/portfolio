@@ -92,6 +92,7 @@ header {
     h2 {
         text-transform: uppercase;
     }
+
 }
 
 @keyframes fadeIn {
@@ -113,16 +114,13 @@ header {
     top: 45vh;
     line-height: 32px;
     font-size: 1.3rem;
-    
     a.active {
-        // planted color choice
         transform: scale(1.2);
         color: $accent;
         transition: .3s ease background;
         padding: 5px;
     }
-    a:hover,
-    a:focus {
+    a:hover{
         color: $accent;
         background: none;
     }

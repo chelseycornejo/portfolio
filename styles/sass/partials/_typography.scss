@@ -11,15 +11,17 @@ ul {
 
 a {
     text-decoration: none;
-    color: $primary;
+    color: $anchor;
     text-transform: uppercase;
     font-family: $headerFont;
 }
 
-a:hover,
+a:hover{
+    color: $primary;
+}
+
 a:focus {
-    color: $third;
-    background: $primary;
+    color: $anchor;
 }
 
 a:active {
@@ -43,13 +45,12 @@ h2 {
 h4 {
     font-size: 3.7rem;
     font-family: $accentFont;
-    color: $third;
+    color: $backGroundTwo;
     margin: 0 auto;
     text-transform: uppercase;
 }
 
 h5 {
-    // transform: rotate(-90deg);
     writing-mode: vertical-lr;
     text-orientation: mixed;
     margin: 0 auto;

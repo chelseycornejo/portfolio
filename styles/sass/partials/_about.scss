@@ -19,7 +19,7 @@ section.about {
         }
         article {
             flex-basis: 50%;
-            margin: auto 0;
+            margin: 50px 0;
             padding-right: 50px;
             color: $third;
             text-align: justify;
@@ -37,7 +37,7 @@ section.about {
     .aboutFlex .aboutContent {
         flex-direction: column;
         padding-left: 30px;
-        margin: 50px 0;
+        margin: 30px 0;
         article {
             flex-basis: 100%;
             padding-right: 0px;
@@ -53,6 +53,9 @@ section.about {
     .aboutFlex .aboutContent {
         padding-left: 0px;
         flex-basis: 100%;
+        article {
+            margin: 0;
+        }
     }
 
     .sectionCountLight,

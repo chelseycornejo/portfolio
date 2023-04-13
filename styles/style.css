@@ -664,7 +664,7 @@ section.about {
 .aboutFlex .aboutContent article {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
-  margin: auto 0;
+  margin: 50px 0;
   padding-right: 50px;
   color: #DBDBDB;
   text-align: justify;
@@ -680,7 +680,7 @@ section.about {
         -ms-flex-direction: column;
             flex-direction: column;
     padding-left: 30px;
-    margin: 50px 0;
+    margin: 30px 0;
   }
   .aboutFlex .aboutContent article {
     -ms-flex-preferred-size: 100%;
@@ -696,6 +696,9 @@ section.about {
     padding-left: 0px;
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
+  }
+  .aboutFlex .aboutContent article {
+    margin: 0;
   }
   .sectionCountLight,
   .sectionCountDark {
